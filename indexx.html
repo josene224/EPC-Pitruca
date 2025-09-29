@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Junte-se a Nós - Lista A</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .join-section {
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 30px;
+            background: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        .join-section h1 {
+            font-size: 2.5rem;
+            color: #2c3e50;
+            margin-bottom: 20px;
+        }
+
+        .join-section p {
+            font-size: 1.3rem;
+            color: #555;
+            margin-bottom: 30px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            text-align: left;
+        }
+
+        label {
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+
+        input, select, textarea {
+            padding: 10px;
+            border-radius: 6px;
+            border: 1px solid #ccc;
+            font-size: 1rem;
+            width: 100%;
+        }
+
+        button {
+            background-color: #ff6600;
+            color: #fff;
+            padding: 12px;
+            border: none;
+            border-radius: 6px;
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background-color: #e85b00;
+        }
+    </style>
+</head>
+<body>
+
+    <section class="join-section">
+        <h1>Junte-se a Nós</h1>
+        <p>Quer participar da Lista A e ajudar a transformar o Pitruca Camama? Preencha o formulário abaixo e faça parte da mudança!</p>
+
+        <form action="https://formspree.io/f/your_form_id" method="POST">
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" placeholder="Seu nome completo" required>
+
+            <label for="sala">Sala:</label>
+            <input type="text" id="sala" name="sala" placeholder="Ex: 12A, 11B" required>
+
+            <label for="classe">Classe:</label>
+            <select id="classe" name="classe" required>
+                <option value="">Selecione sua classe</option>
+                <option value="10ª">10ª</option>
+                <option value="11ª">11ª</option>
+                <option value="12ª">12ª</option>
+                <option value="13ª">13ª</option>
+            </select>
+
+            <label for="curso">Curso:</label>
+            <input type="text" id="curso" name="curso" placeholder="Seu curso (ex: Ciências, Economia)" required>
+
+            <label for="telefone">Telefone:</label>
+            <input type="tel" id="telefone" name="telefone" placeholder="+244 9XX XXX XXX">
+
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email" placeholder="Seu email (opcional)">
+
+            <label for="mensagem">Por que quer fazer parte?</label>
+            <textarea id="mensagem" name="mensagem" rows="4" placeholder="Escreva uma breve mensagem"></textarea>
+
+            <button type="submit">Enviar Formulário</button>
+        </form>
+    </section>
+
+</body>
+</html>

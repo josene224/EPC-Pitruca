@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre Nós - Alê.Escola</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" 
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <a href="index.html" class="logo">
+            <img src="A_flat,_vector-style_digital_illustration_features.png" 
+                 alt="Logo EPC" style="height:50px;">
+            EPC<span>|Lista C</span>
+        </a>
+
+        <div id="menu-bars" class="fas fa-bars"></div>
+
+        <nav class="navbar">
+            <a href="index.html">Página inicial</a>
+            <a href="about.html">Sobre nós</a>
+            <a href="services.html">Serviços</a>
+            <a href="teachers.html">Professores</a>
+            <a href="pricing.html">Preços</a>
+            <a href="contact.html">Contatos</a>
+        </nav>
+    </header>
+
+    <!-- Sobre Nós Page -->
+    <section class="about background" id="about">
+        <div class="image">
+            <img src="img/about-img.png" alt="Nossa Escola">
+        </div>
+        <div class="content">
+            <h3>Quem Somos</h3>
+            <p>
+                Somos a <strong>Alê.Escola</strong>, uma instituição de ensino que acredita que 
+                aprender pode ser divertido e inspirador. 
+                Com uma equipe de professores qualificados e apaixonados por educação, 
+                buscamos transformar a sala de aula em um espaço criativo e inovador.
+            </p>
+            <p>
+                Nosso compromisso é formar não apenas alunos preparados academicamente, 
+                mas cidadãos conscientes, solidários e capazes de transformar o mundo. 
+                Investimos em atividades culturais, artísticas e esportivas para promover 
+                o desenvolvimento integral de cada criança.
+            </p>
+            <a href="services.html" class="btn"></a>
+        </div>
+    </section>
+
+    <!-- Valores -->
+    <section class="features up-and-down">
+        <div class="box-container">
+            <h3 class="title">Nossos valores</h3>
+            <div class="box">
+                <img src="img/left-icon1.png" alt="">
+                <div class="info">
+                    <h3>Educação de qualidade</h3>
+                    <p>Metodologias modernas e adaptadas à realidade dos alunos.</p>
+                </div>
+            </div>
+            <div class="box">
+                <img src="img/left-icon2.png" alt="">
+                <div class="info">
+                    <h3>Inovação constante</h3>
+                    <p>Usamos tecnologia para facilitar e enriquecer o aprendizado.</p>
+                </div>
+            </div>
+            <div class="box">
+                <img src="img/left-icon3.png" alt="">
+                <div class="info">
+                    <h3>Apoio às famílias</h3>
+                    <p>Estamos sempre próximos dos pais, fortalecendo a parceria.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+   
+
+    <!-- Script -->
+    <script>
+        let menu = document.querySelector("#menu-bars");
+        let navbar = document.querySelector(".navbar");
+
+        menu.addEventListener("click", () =>{
+            menu.classList.toggle("fa-times");
+            navbar.classList.toggle("nav-taggle");
+        });
+
+        window.onscroll = () => {
+            menu.classList.remove("fa-times");
+            navbar.classList.remove("nav-taggle");
+        }
+</script>
+   <script>
+  
+    // Efeito de saída
+    document.querySelectorAll("a").forEach(link => {
+        if (link.hostname === window.location.hostname) { 
+            link.addEventListener("click", function(e) {
+                e.preventDefault();
+                const target = this.href;
+                document.body.classList.add("fade-out");
+                setTimeout(() => {
+                    window.location.href = target;
+                }, 500); // mesmo tempo do CSS (0.5s)
+            });
+        }
+    });
+
+    // Efeito de entrada
+    window.addEventListener("pageshow", () => {
+        document.body.classList.remove("fade-out");
+    });
+</script>
+</body>
+</html>
